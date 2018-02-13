@@ -1,0 +1,33 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.0",
+    "prettier": "^1.10.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-navigation": "^1.0.3",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "cosmos": "cosmos",
+    "cosmos:export": "cosmos-export",
+    "eject": "react-scripts eject",
+    "format": "prettier --single-quote --trailing-comma es5 --write src/**/*.js",
+    "precommit": "lint-staged",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "react-cosmos": "^3.6.1"
+  }
+}
