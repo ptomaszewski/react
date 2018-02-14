@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
+import PrimaryButton from './components/elements/buttons/primary-button';
+
 import logo from './logo.svg';
+
 import './App.css';
 
 class App extends Component {
@@ -16,6 +20,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Helmet>
+          <title>My App</title>
+          <meta name="description" content="moja apka" />
+        </Helmet>
         <header className="App-header">
           {this.props.test}
           <img src={logo} className="App-logo" alt="logo" />
@@ -26,6 +34,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <PrimaryButton />
       </div>
     );
   }
