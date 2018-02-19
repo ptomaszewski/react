@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Button from './button';
+import Button from './Button';
 
 class PrimaryButton extends Component {
   // constructor (props) {

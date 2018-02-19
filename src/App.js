@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import PrimaryButton from './components/elements/buttons/primary-button';
+import Routes from './Routes';
+import { Link } from 'react-router-dom';
+import PrimaryButton from './components/elements/buttons/PrimaryButton';
 
 import logo from './logo.svg';
 
@@ -18,6 +20,8 @@ class App extends Component {
   }
 
   render() {
+    const childProps = {};
+
     return (
       <div className="App">
         <Helmet>
@@ -35,6 +39,11 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
         <PrimaryButton />
+        <Link to="/">Strona główna</Link>
+        <Link to="/list">Lista ofert</Link>
+        <Link to="/offer">oferta</Link>
+        <a href="/list"> List </a>
+        <Routes childProps={childProps} />
       </div>
     );
   }
