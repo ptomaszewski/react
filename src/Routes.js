@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import asyncComponent from './components/AsyncComponent';
+import NotFound from './components/NotFound';
 
 const AsyncMainPage = asyncComponent(() => import('./containers/MainPage'));
 const AsyncOffersList = asyncComponent(() => import('./containers/OffersList'));
@@ -11,6 +12,6 @@ export default ({ childProps }) => (
     <Route path="/" exact={true} component={AsyncMainPage} />
     <Route path="/list" exact={true} component={AsyncOffersList} />
     <Route path="/offer" exact={true} component={AsyncOffer} />
-    <Route render={<div>404</div>} />
+    <Route component={NotFound} />
   </Switch>
 );
