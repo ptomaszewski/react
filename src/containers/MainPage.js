@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
+import AddTodo from '../components/elements/todo/AddTodo';
+import VisibleTodoList from '../components/elements/todo/VisibleTodoList';
+import Footer from '../components/elements/todo/Footer';
 
 class MainPage extends Component {
   render() {
@@ -12,7 +15,10 @@ class MainPage extends Component {
             content="Strona główna przykładowej aplikacji napisanej w React"
           />
         </Helmet>
-        <p>MainPage</p>
+        <p>TODO LIST:</p>
+        <AddTodo />
+        <VisibleTodoList />
+        <Footer />
       </div>
     );
   }

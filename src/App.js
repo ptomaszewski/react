@@ -16,7 +16,6 @@ class App extends Component {
 
   handleClick(event) {
     event.preventDefault();
-    alert('Klik');
   }
 
   render() {
@@ -32,17 +31,12 @@ class App extends Component {
           {this.props.test}
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title" onClick={this.handleClick}>
-            Welcome to React
+            Example React App
           </h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <PrimaryButton />
-        <Link to="/">Strona główna</Link>
-        <Link to="/list">Lista ofert</Link>
+        <Link to="/">Strona główna</Link>&nbsp;&nbsp;|&nbsp;&nbsp;
+        <Link to="/list">Lista ofert</Link>&nbsp;&nbsp;|&nbsp;&nbsp;
         <Link to="/offer">oferta</Link>
-        <a href="/list"> List </a>
         <Routes childProps={childProps} />
       </div>
     );
